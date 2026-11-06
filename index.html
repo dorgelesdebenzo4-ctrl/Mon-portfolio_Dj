@@ -3,399 +3,1001 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Djombo Edy Dorgeles - Designer Graphique</title>
-    <meta name="description" content="Portfolio de Djombo Edy Dorgèles, designer graphique basé à Abidjan, spécialisé en branding, print design, social media et identité visuelle.">
+    <title>Djombo Edy Dorgeles · Graphiste et motion designer</title>
+    <meta name="description" content="Portfolio de Djombo Edy Dorgeles, graphiste, motion designer et monteur vidéo à Abidjan : affiches, identités de marque et vidéos motion. Disponible pour un poste ou une mission.">
     <script>
         document.documentElement.classList.add('js');
         try {
             document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+            setTimeout(function () {
+                if (!document.documentElement.classList.contains('js-ok')) document.documentElement.classList.add('is-ready', 'reveal-all');
+            }, 6000);
+            if (!sessionStorage.getItem('intro-seen') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.documentElement.classList.add('has-intro');
+            }
         } catch (error) {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400&family=Changa+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
-    <div class="cursor" aria-hidden="true"></div>
-    <div class="noise" aria-hidden="true"></div>
+    <a class="skip-link" href="#realisations">Aller aux travaux</a>
+
+    <!-- Intro -->
+    <div class="intro" aria-hidden="true">
+        <div class="intro-inner">
+            <span class="intro-mark">DED</span>
+            <span class="intro-role">Graphiste · Motion designer</span>
+        </div>
+        <div class="intro-foot">
+            <span>Abidjan</span>
+            <span class="intro-count">000</span>
+        </div>
+        <span class="intro-bar"></span>
+    </div>
+
+    <div class="scroll-progress" aria-hidden="true"></div>
+    <div class="cursor" aria-hidden="true">
+        <span class="cursor-dot"></span>
+        <span class="cursor-frame">
+            <span class="cursor-cross"></span>
+            <span class="cursor-label"><span class="cursor-rec"></span><span class="cursor-text"></span></span>
+        </span>
+    </div>
 
     <nav class="site-nav" id="navbar" aria-label="Navigation principale">
         <div class="nav-shell">
-            <a class="brand-mark" href="#accueil" aria-label="Retour à l'accueil">DED</a>
+            <a class="wordmark" href="#accueil" aria-label="Djombo Edy Dorgeles, retour à l'accueil">
+                <span class="wordmark-mark" aria-hidden="true">DED</span>
+                <span class="wordmark-name">Djombo Edy Dorgeles</span>
+            </a>
             <button class="nav-toggle" type="button" aria-label="Ouvrir le menu" aria-controls="main-navigation" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <i data-lucide="menu" class="icon-open"></i>
+                <i data-lucide="x" class="icon-close"></i>
             </button>
             <ul class="nav-links" id="main-navigation">
-                <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#competences">Expertise</a></li>
                 <li><a href="#realisations">Portfolio</a></li>
+                <li><a href="#videos">Motion</a></li>
                 <li><a href="#branding">Branding</a></li>
                 <li><a href="#projets">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button class="theme-toggle" id="theme-toggle" type="button" aria-label="Basculer le thème">🌙</button></li>
+                <li class="nav-actions">
+                    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Activer le mode clair">
+                        <i data-lucide="moon" class="icon-moon"></i>
+                        <i data-lucide="sun" class="icon-sun"></i>
+                    </button>
+                    <a class="btn btn-primary btn-nav" href="#contact">Me contacter</a>
+                </li>
             </ul>
         </div>
     </nav>
 
     <main>
-        <section class="hero section-pad" id="accueil">
+        <!-- Hero -->
+        <section class="hero" id="accueil">
+            <div class="hero-spot" aria-hidden="true"></div>
+
             <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                    <span class="eyebrow">Motion Designer - Designer Graphique - Monteur vidéo / Abidjan</span>
-                    <h1 class="hero-title">Djombo Edy Dorgeles</h1>
-                    <p class="typewriter" aria-label="Identités visuelles, branding et supports premium.">
-                        <span id="typed-text"></span>
+                <div class="hero-copy">
+                    <p class="hero-meta hero-seq" style="--seq: 0">
+                        <span class="status-dot" aria-hidden="true"></span>
+                        Disponible pour un poste ou une mission · Abidjan
                     </p>
-                    <p class="hero-description">
-                        Je conçois des identités visuelles, supports imprimés et contenus digitaux qui donnent aux marques une présence claire, mémorable et haut de gamme.
+
+                    <h1 class="hero-title" aria-label="Djombo Edy Dorgeles">
+                        <span class="line" data-chars>Djombo Edy</span>
+                        <span class="line" data-chars>Dorgeles</span>
+                    </h1>
+
+                    <p class="hero-role hero-seq" style="--seq: 6">
+                        <span class="role-dash" aria-hidden="true"></span>
+                        <span class="role" aria-live="off">
+                            <span class="role-item is-active">Graphiste</span>
+                            <span class="role-item">Motion designer</span>
+                            <span class="role-item">Monteur vidéo</span>
+                        </span>
                     </p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#realisations">Voir mes créations</a>
-                        <a class="btn btn-ghost" href="CV/MON CV PRO.pdf" download="MON CV PRO.pdf" target="_blank">Télécharger mon CV</a>
+
+                    <p class="hero-description hero-seq" style="--seq: 7">
+                        Je conçois des affiches, des identités de marque et des vidéos motion, de l'idée jusqu'au fichier final prêt à imprimer ou à publier.
+                    </p>
+
+                    <div class="hero-actions hero-seq" style="--seq: 8">
+                        <a class="btn btn-primary btn-lg magnetic" href="#contact">
+                            Me contacter
+                            <i data-lucide="arrow-right"></i>
+                        </a>
+                        <a class="btn btn-secondary btn-lg" href="CV/MON CV PRO.pdf" download="MON CV PRO.pdf" target="_blank">
+                            <i data-lucide="file-down"></i>
+                            Télécharger mon CV
+                        </a>
                     </div>
+
+                    <a class="hero-quick hero-seq" style="--seq: 9" href="https://wa.me/2250779099443?text=Bonjour%20Edy%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission." target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="message-circle"></i>
+                        Ou directement sur WhatsApp
+                        <span class="mono">+225 07 79 09 94 43</span>
+                    </a>
                 </div>
 
-                <div class="hero-visual reveal">
-                    <div class="portrait-frame">
-                        <img src="images/portrait-djombo-edy-dorgeles.jpg" alt="Portrait professionnel de Djombo Edy Dorgeles">
-                    </div>
-                    <div class="hero-card">
-                        <span>Disponible pour</span>
-                        <strong>Création Graphique & Digitale</strong>
-                    </div>
+                <div class="hero-visual" id="hero-visual">
+                    <figure class="portrait crop">
+                        <div class="portrait-media">
+                            <img width="864" height="1184" src="images/portrait-djombo-edy-dorgeles.jpg" alt="Portrait de Djombo Edy Dorgeles en costume" fetchpriority="high">
+                        </div>
+                    </figure>
+
+                    <figure class="reel">
+                        <video id="hero-reel" src="images/video/CV MOTION RD.mp4" muted loop playsinline preload="metadata" aria-label="Extrait de mon CV motion"></video>
+                        <figcaption class="reel-bar">
+                            <span class="rec" aria-hidden="true"></span>
+                            <span>Extrait — CV motion</span>
+                        </figcaption>
+                    </figure>
+
+                    <a class="badge magnetic" href="https://wa.me/2250779099443?text=Bonjour%20Edy%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission." target="_blank" rel="noopener noreferrer" aria-label="Me contacter sur WhatsApp">
+                        <svg class="badge-ring" viewBox="0 0 120 120" aria-hidden="true">
+                            <defs>
+                                <path id="badge-circle" d="M60,60 m-46,0 a46,46 0 1,1 92,0 a46,46 0 1,1 -92,0"></path>
+                            </defs>
+                            <text><textPath href="#badge-circle" textLength="286" lengthAdjust="spacing">Disponible maintenant · Me contacter · </textPath></text>
+                        </svg>
+                        <span class="badge-core"><i data-lucide="arrow-up-right"></i></span>
+                    </a>
                 </div>
+            </div>
+
+            <div class="container hero-timeline hero-seq" style="--seq: 10" aria-hidden="true">
+                <span class="tl-label">V1 · CV motion</span>
+                <div class="tl-track">
+                    <span class="tl-ticks"></span>
+                    <span class="tl-progress"></span>
+                    <span class="tl-head-wrap"><span class="tl-head"></span></span>
+                </div>
+                <span class="tl-time" id="hero-timecode">00:00:00</span>
             </div>
         </section>
 
-        <section class="skills section-pad" id="competences">
-            <div class="container">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Expertise</span>
-                    <h2>Une direction visuelle pensée pour marquer.</h2>
-                    <p>De la stratégie à l'exécution, chaque élément sert une identité plus forte et une communication plus nette.</p>
+        <!-- Bande défilante -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-group">
+                    <span class="mq-item">Affiches</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-outline">Identités visuelles</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-serif">Motion design</span><span class="mq-sep"></span>
+                    <span class="mq-item">Montage vidéo</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-outline">Logos</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-serif">Branding</span><span class="mq-sep"></span>
+                </div>
+                <div class="marquee-group">
+                    <span class="mq-item">Affiches</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-outline">Identités visuelles</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-serif">Motion design</span><span class="mq-sep"></span>
+                    <span class="mq-item">Montage vidéo</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-outline">Logos</span><span class="mq-sep"></span>
+                    <span class="mq-item mq-serif">Branding</span><span class="mq-sep"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expertise -->
+        <section class="section skills" id="competences">
+            <div class="container skills-layout">
+                <div class="skills-aside">
+                    <div class="section-heading">
+                        <p class="section-label" data-reveal="up">01 — Expertise</p>
+                        <h2 data-split>Du logo à la campagne, une image cohérente</h2>
+                        <p data-reveal="up">De la stratégie à l'exécution, chaque support sert la même identité et le même message.</p>
+                    </div>
+
+                    <dl class="stats" data-stagger>
+                        <div class="stat" data-reveal="up">
+                            <dt>Visuels print et réseaux</dt>
+                            <dd><span data-count="13">13</span></dd>
+                        </div>
+                        <div class="stat" data-reveal="up">
+                            <dt>Vidéos motion</dt>
+                            <dd><span data-count="6">6</span></dd>
+                        </div>
+                        <div class="stat" data-reveal="up">
+                            <dt>Identités de marque</dt>
+                            <dd><span data-count="4">4</span></dd>
+                        </div>
+                        <div class="stat" data-reveal="up">
+                            <dt>Études de cas</dt>
+                            <dd><span data-count="4">4</span></dd>
+                        </div>
+                    </dl>
                 </div>
 
-                <div class="skills-grid">
-                    <article class="skill-card reveal">
-                        <i data-lucide="palette"></i>
-                        <h3>Design Graphique</h3>
-                        <p>Visuels impactants pour campagnes, événements, affiches et supports commerciaux.</p>
-                    </article>
-                    <article class="skill-card reveal">
-                        <i data-lucide="sparkles"></i>
-                        <h3>Création de Logos</h3>
-                        <p>Signes distinctifs, simples et mémorables, conçus pour installer une marque durable.</p>
-                    </article>
-                    <article class="skill-card reveal">
-                        <i data-lucide="file-text"></i>
-                        <h3>Supports Visuels</h3>
-                        <p>Flyers, affiches, kakemonos et documents de présentation avec une finition professionnelle.</p>
-                    </article>
-                    <article class="skill-card reveal">
-                        <i data-lucide="ruler"></i>
-                        <h3>Charte Graphique</h3>
-                        <p>Systèmes visuels cohérents pour harmoniser couleurs, typographies et règles d'utilisation.</p>
-                    </article>
-                    <article class="skill-card reveal">
-                        <i data-lucide="badge-check"></i>
-                        <h3>Branding</h3>
-                        <p>Identités complètes avec univers graphique, ton visuel et déclinaisons prêtes à l'emploi.</p>
-                    </article>
-                    <article class="skill-card reveal">
-                        <i data-lucide="lightbulb"></i>
-                        <h3>Stratégie Visuelle</h3>
-                        <p>Approche créative alignée sur les objectifs business, la cible et le positionnement.</p>
-                    </article>
-                </div>
+                <ol class="skills-list" data-stagger>
+                    <li data-reveal="up">
+                        <span class="skill-index">01</span>
+                        <div>
+                            <h3>Design graphique</h3>
+                            <p>Visuels pour campagnes, événements, affiches et supports commerciaux</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">02</span>
+                        <div>
+                            <h3>Création de logos</h3>
+                            <p>Signes simples et lisibles, pensés pour installer une marque dans la durée</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">03</span>
+                        <div>
+                            <h3>Motion design et montage</h3>
+                            <p>Capsules publicitaires, intros de marque et CV animés, du storyboard à l'export</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">04</span>
+                        <div>
+                            <h3>Supports imprimés</h3>
+                            <p>Flyers, affiches, kakémonos et documents de présentation</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">05</span>
+                        <div>
+                            <h3>Charte graphique</h3>
+                            <p>Couleurs, typographies et règles d'utilisation réunies dans un même système</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">06</span>
+                        <div>
+                            <h3>Branding</h3>
+                            <p>Identités complètes et leurs déclinaisons : carte de visite, enseigne, réseaux sociaux</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                    <li data-reveal="up">
+                        <span class="skill-index">07</span>
+                        <div>
+                            <h3>Stratégie visuelle</h3>
+                            <p>Des choix créatifs alignés sur la cible, les objectifs et le positionnement</p>
+                        </div>
+                        <i data-lucide="arrow-up-right" class="skill-arrow"></i>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="container tools" data-reveal="up">
+                <span class="tools-label">Outils</span>
+                <ul>
+                    <li>After Effects</li>
+                    <li>Premiere Pro</li>
+                    <li>Illustrator</li>
+                    <li>Photoshop</li>
+                    <li>CapCut</li>
+                    <li>ChatGPT</li>
+                </ul>
             </div>
         </section>
 
-        <section class="portfolio section-pad" id="realisations">
-            <div class="container">
-                <div class="section-heading split reveal">
+        <!-- Portfolio -->
+        <section class="portfolio poster-wall" id="realisations">
+            <div class="wall-sticky">
+                <div class="container section-heading split wall-head">
                     <div>
-                        <span class="eyebrow">Réalisations</span>
-                        <h2>Une sélection de créations graphiques.</h2>
+                        <p class="section-label" data-reveal="up">02 — Réalisations</p>
+                        <h2 data-split>Affiches, flyers et visuels de marque</h2>
                     </div>
-                    <div class="filter-bar" aria-label="Filtrer les réalisations">
-                        <button class="filter-btn active" type="button" data-filter="all">Tout</button>
-                        <button class="filter-btn" type="button" data-filter="print">Imprimé</button>
-                        <button class="filter-btn" type="button" data-filter="social">Réseaux</button>
-                        <button class="filter-btn" type="button" data-filter="branding">Identité</button>
+                    <div class="filter-bar" role="group" aria-label="Filtrer les réalisations" data-reveal="up">
+                        <span class="filter-indicator" aria-hidden="true"></span>
+                        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true">Tout</button>
+                        <button class="filter-btn" type="button" data-filter="print" aria-pressed="false">Imprimé</button>
+                        <button class="filter-btn" type="button" data-filter="social" aria-pressed="false">Réseaux</button>
+                        <button class="filter-btn" type="button" data-filter="branding" aria-pressed="false">Identité</button>
                     </div>
                 </div>
 
-                <div class="masonry-grid" id="portfolio-grid">
-                    <article class="gallery-item reveal" data-category="print">
-                        <img src="images/affiche-concert.jpg" alt="Affiche de concert réalisée par Djombo Edy Dorgeles" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Affiche Concert</h3>
-                            <span>Print Design</span>
-                        </div>
-                    </article>
-                    
-                    <article class="gallery-item reveal tall" data-category="print">
-                        <img src="images/ballon.jpg" alt="Affiche foot réalisée par Djombo Edy Dorgeles" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Affiche Foot</h3>
-                            <span>Poster Design</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal" data-category="social">
-                        <img src="images/AFFICHE SOIREE CINEMA.png" alt="Affiche de soirée de cinéma" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Affiche de Cinéma</h3>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal wide" data-category="print">
-                        <img src="images/affiche-sensibilisation-enfant.jpg" alt="Affiche de sensibilisation pour enfants" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Sensibilisation</h3>
-                            <span>Print Design</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal" data-category="social">
-                        <img src="images/kessie.jpg" alt="Flyer promotionnel de football" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Flyer Sport</h3>
-                            <span>Social Media</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal tall" data-category="branding">
-                        <img src="images/affiche-saint-valentin.jpg" alt="Affiche Saint-Valentin" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Saint-Valentin</h3>
-                            <span>Brand Content</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal" data-category="branding">
-                        <img src="images/carte-de-visite.jpg" alt="Carte de visite pour identité de marque" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Carte de Visite</h3>
-                            <span>Branding</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal wide" data-category="print">
-                        <img src="images/panneau-publicitaire.jpg" alt="Mockup de panneau publicitaire sur bâtiment" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Panneau Publicitaire</h3>
-                            <span>Outdoor</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal wide" data-category="print">
-                        <img src="images/Mark.jpg" alt="Mockup de panneau publicitaire sur bâtiment" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Affiche Publicitaire</h3>
-                            <span>Outdoor</span>
-                        </div>
-                    </article>
-                    <article class="gallery-item reveal wide" data-category="print">
-                        <img src="images/flyer église.jpg" alt="Mockup de panneau publicitaire sur bâtiment" loading="lazy">
-                        <div class="gallery-overlay">
-                            <h3>Flyer Église</h3>
-                            <span>Print Design</span>
-                        </div>
-                    </article>
+                <div class="wall-track" id="portfolio-grid">
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche concert">
+                            <img width="1400" height="1400" src="images/affiche-concert.jpg" alt="Affiche de concert" loading="lazy">
+                        </button>
+                        <figcaption><span>Affiche concert</span><span class="tag">Print</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche foot">
+                            <img width="1254" height="1254" src="images/ballon.jpg" alt="Affiche de match de football" loading="lazy">
+                        </button>
+                        <figcaption><span>Affiche foot</span><span class="tag">Print</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="social" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche soirée cinéma">
+                            <img width="5000" height="5000" src="images/AFFICHE SOIREE CINEMA.png" alt="Affiche d'une soirée cinéma" loading="lazy">
+                        </button>
+                        <figcaption><span>Soirée cinéma</span><span class="tag">Réseaux</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche de sensibilisation">
+                            <img width="1400" height="1400" src="images/affiche-sensibilisation-enfant.jpg" alt="Affiche de sensibilisation pour la protection des forêts" loading="lazy">
+                        </button>
+                        <figcaption><span>Sensibilisation</span><span class="tag">Print</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="social" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : flyer sport">
+                            <img width="1024" height="1536" src="images/kessie.jpg" alt="Flyer promotionnel de football" loading="lazy">
+                        </button>
+                        <figcaption><span>Flyer sport</span><span class="tag">Réseaux</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="branding" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche Saint-Valentin">
+                            <img width="1038" height="1400" src="images/affiche-saint-valentin.jpg" alt="Affiche Saint-Valentin pour un complexe hôtelier" loading="lazy">
+                        </button>
+                        <figcaption><span>Saint-Valentin</span><span class="tag">Brand content</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="branding" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : carte de visite">
+                            <img width="1400" height="933" src="images/carte-de-visite.jpg" alt="Carte de visite recto verso" loading="lazy">
+                        </button>
+                        <figcaption><span>Carte de visite</span><span class="tag">Identité</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : panneau publicitaire">
+                            <img width="1400" height="933" src="images/panneau-publicitaire.jpg" alt="Panneau publicitaire en situation sur un bâtiment" loading="lazy">
+                        </button>
+                        <figcaption><span>Panneau publicitaire</span><span class="tag">Affichage</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : affiche publicitaire">
+                            <img width="1080" height="1080" src="images/Mark.jpg" alt="Affiche publicitaire pour une agence de marketing digital" loading="lazy">
+                        </button>
+                        <figcaption><span>Affiche publicitaire</span><span class="tag">Affichage</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="print" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : flyer église">
+                            <img width="1080" height="1350" src="images/flyer église.jpg" alt="Flyer pour un événement d'église" loading="lazy">
+                        </button>
+                        <figcaption><span>Flyer église</span><span class="tag">Print</span></figcaption>
+                    </figure>
+                    <figure class="gallery-item" data-category="social" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : flyer menu Joy's Food">
+                            <img width="1400" height="2100" src="images/joys-food.webp" alt="Flyer menu du restaurant Joy's Food : foutou, foufou, placali et attiéké" loading="lazy">
+                        </button>
+                        <figcaption><span>Menu Joy's Food</span><span class="tag">Restauration</span></figcaption>
+                    </figure>
+                </div>
+
+                <div class="container wall-foot" aria-hidden="true">
+                    <span class="wall-count"><b id="wall-index">01</b> / <span id="wall-total">11</span></span>
+                    <span class="wall-bar"><span></span></span>
+                    <span class="wall-hint">Faites défiler <i data-lucide="arrow-right"></i></span>
                 </div>
             </div>
         </section>
 
-        <section class="video-section section-pad" id="videos">
-            <div class="container video-layout">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Motion</span>
-                    <h2>Motion Design & Montage vidéo pour donner du rythme aux marques.</h2>
-                    <p>Une s&eacute;lection de r&eacute;alisations en motion design et montage vid&eacute;o, pens&eacute;es pour donner du rythme et de l&apos;impact aux marques.</p>
+        <!-- Appel à l'action -->
+        <section class="cta-band" aria-labelledby="cta-title">
+            <div class="container cta-inner">
+                <div>
+                    <p class="cta-kicker" data-reveal="up">Vous recrutez ?</p>
+                    <h2 id="cta-title" data-split>Ces visuels vous parlent&nbsp;? Je peux créer les vôtres.</h2>
                 </div>
-                <div class="video-grid">
-                <div class="video-card reveal">
-                    <video class="brand-video" controls preload="metadata">
-                        <source src="images/video/WAVE PROJET_1.mp4" type="video/mp4">
-                        Votre navigateur ne supporte pas la balise vidéo.
-                    </video>
-                </div>
-                <div class="video-copy reveal">
-                    <h3>Spot Publicitaire – Wave</h3>
-                    <p style="font-size: 22px;">Conception d&apos;une capsule vid&eacute;o dynamique ax&eacute;e sur la simplicit&eacute; d&apos;utilisation du service. R&eacute;alisation du storyboard, animations 2D et synchronisation sonore sous After Effects.</p>
-                    <p class="tools"><strong>Outils utilis&eacute;s :</strong> After Effects &ndash; Illustrator &ndash; ChatGPT</p>
-                </div>
-                <div class="video-card reveal">
-                    <video class="brand-video charlys-video" controls preload="metadata">
-                        <source src="images/video/WhatsApp Video 2026-02-06 at 00.39.09.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-copy reveal">
-                    <h3>Collection Costume &amp; &Eacute;l&eacute;gance &ndash; Charly&apos;s Boutik</h3>
-                    <p style="font-size: 22px;">Conception d&apos;une animation d&apos;introduction &eacute;pur&eacute;e et moderne. Valorisation des symboles de la marque &agrave; travers des effets de rebond et de r&eacute;v&eacute;lations fluides.</p>
-                    <p class="tools"><strong>Outils utilis&eacute;s :</strong> CapCut</p>
-                </div>
-                <div class="video-card reveal">
-                    <video class="brand-video" controls preload="metadata">
-                        <source src="images/video/Toyi-Group_Motion_V4.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-copy reveal">
-                    <h3>Motion Design &ndash; Toyi Group</h3>
-                    <p style="font-size: 22px;">R&eacute;alisation d&apos;une vid&eacute;o en motion design pour Toyi Group, mettant en valeur l&apos;identit&eacute; de la marque &agrave; travers des animations fluides et un rythme soutenu.</p>
-                    <p class="tools"><strong>Outils utilis&eacute;s :</strong> After Effects &ndash; Illustrator</p>
-                </div>
-                <div class="video-card reveal">
-                    <video class="brand-video" controls preload="metadata">
-                        <source src="images/video/Toyi-Group_CTA.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-copy reveal">
-                    <h3>Vid&eacute;o CTA &ndash; Toyi Group</h3>
-                    <p style="font-size: 22px;">Vid&eacute;o d&apos;appel &agrave; l&apos;action pour Toyi Group, con&ccedil;ue pour capter l&apos;attention et inciter le public &agrave; passer &agrave; l&apos;action gr&acirc;ce &agrave; un message clair et un rythme percutant.</p>
-                    <p class="tools"><strong>Outils utilis&eacute;s :</strong> After Effects &ndash; Illustrator</p>
-                </div>
-                <div class="video-card reveal">
-                    <video class="brand-video" controls preload="metadata">
-                        <source src="images/video/CV_Motion_Djombo_Edy_Dorgeles_HD.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="video-copy reveal">
-                    <h3>CV Motion &ndash; DED</h3>
-                    <p style="font-size: 22px;">Nouvelle version haute d&eacute;finition de mon CV anim&eacute; : un parcours, des comp&eacute;tences et un univers cr&eacute;atif mis en mouvement.</p>
-                    <p class="tools"><strong>Outils utilis&eacute;s :</strong> After Effects &ndash; Photoshop</p>
-                </div>
+                <div class="cta-actions" data-reveal="up">
+                    <a class="btn btn-dark btn-lg magnetic" href="https://wa.me/2250779099443?text=Bonjour%20Edy%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission." target="_blank" rel="noopener noreferrer">
+                        <i data-lucide="message-circle"></i>
+                        Écrire sur WhatsApp
+                    </a>
+                    <a class="btn btn-ghost-dark btn-lg" href="mailto:dorgelesdebenzo4@gmail.com?subject=Opportunit%C3%A9%20%E2%80%94%20suite%20%C3%A0%20votre%20portfolio&amp;body=Bonjour%20Edy%2C%0A%0AJ%27ai%20consult%C3%A9%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission.%0A%0A">
+                        <i data-lucide="mail"></i>
+                        Envoyer un email
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="branding section-pad" id="branding">
+        <!-- Motion -->
+        <section class="section video-section" id="videos">
             <div class="container">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Branding</span>
-                    <h2>Logos et systèmes de marque.</h2>
-                    <p>Des cartes sombres, des mockups sobres et une lecture directe de chaque univers visuel.</p>
+                <div class="section-heading">
+                    <p class="section-label" data-reveal="up">03 — Motion</p>
+                    <h2 data-split>Motion design et montage vidéo</h2>
+                    <p data-reveal="up">Des capsules courtes pour présenter un service, une collection ou une marque, du storyboard à l'export. Survolez une vidéo pour un aperçu.</p>
                 </div>
 
-                <div class="branding-grid">
-                    <article class="brand-card reveal">
-                        <div class="logo-stage">
-                            <img src="images/logo-lumishea.jpg" alt="Logo LumiShea" loading="lazy">
+                <div class="video-list">
+                    <article class="video-row">
+                        <div class="video-frame" data-reveal="clip">
+                            <div class="media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="images/video/WAVE PROJET_1.mp4#t=2" type="video/mp4">
+                                    Votre navigateur ne lit pas cette vidéo.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video-copy" data-reveal="up">
+                            <span class="video-number" aria-hidden="true">01</span>
+                            <p class="video-meta"><span class="rec" aria-hidden="true"></span><span class="video-duration">—</span></p>
+                            <h3>Spot publicitaire — Wave</h3>
+                            <p>Capsule vidéo centrée sur la simplicité d'utilisation du service. Storyboard, animations 2D et synchronisation sonore sous After Effects.</p>
+                            <p class="tools-inline">After Effects · Illustrator · ChatGPT</p>
+                        </div>
+                    </article>
+                    <article class="video-row">
+                        <div class="video-frame" data-reveal="clip">
+                            <div class="media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="images/video/WhatsApp Video 2026-02-06 at 00.39.09.mp4#t=2" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video-copy" data-reveal="up">
+                            <span class="video-number" aria-hidden="true">02</span>
+                            <p class="video-meta"><span class="rec" aria-hidden="true"></span><span class="video-duration">—</span></p>
+                            <h3>Collection Costume &amp; Élégance — Charly's Boutik</h3>
+                            <p>Animation d'introduction épurée qui met en valeur les symboles de la marque par des rebonds et des révélations fluides.</p>
+                            <p class="tools-inline">CapCut</p>
+                        </div>
+                    </article>
+                    <article class="video-row">
+                        <div class="video-frame" data-reveal="clip">
+                            <div class="media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="images/video/Toyi-Group_Motion_V4.mp4#t=2" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video-copy" data-reveal="up">
+                            <span class="video-number" aria-hidden="true">03</span>
+                            <p class="video-meta"><span class="rec" aria-hidden="true"></span><span class="video-duration">—</span></p>
+                            <h3>Motion design — Toyi Group</h3>
+                            <p>Vidéo de présentation qui met en avant l'identité de la marque avec des animations fluides et un rythme soutenu.</p>
+                            <p class="tools-inline">After Effects · Illustrator</p>
+                        </div>
+                    </article>
+                    <article class="video-row">
+                        <div class="video-frame video-frame--vertical" data-reveal="clip">
+                            <div class="media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="images/video/Toyi-Group_Pub_Finale.mp4#t=1" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video-copy" data-reveal="up">
+                            <span class="video-number" aria-hidden="true">04</span>
+                            <p class="video-meta"><span class="rec" aria-hidden="true"></span><span class="video-duration">—</span></p>
+                            <h3>Vidéo d'appel à l'action — Toyi Group</h3>
+                            <p>Format court pensé pour capter l'attention et pousser le public à agir, avec un message clair et un montage nerveux.</p>
+                            <p class="tools-inline">Premiere Pro</p>
+                        </div>
+                    </article>
+                    <article class="video-row">
+                        <div class="video-frame" data-reveal="clip">
+                            <div class="media">
+                                <video controls preload="metadata" playsinline>
+                                    <source src="images/video/CV_Motion_Djombo_Edy_Dorgeles_HD.mp4#t=2" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+                        <div class="video-copy" data-reveal="up">
+                            <span class="video-number" aria-hidden="true">05</span>
+                            <p class="video-meta"><span class="rec" aria-hidden="true"></span><span class="video-duration">—</span></p>
+                            <h3>CV motion — DED</h3>
+                            <p>Version haute définition de mon CV animé : mon parcours, mes compétences et mon univers créatif en mouvement.</p>
+                            <p class="tools-inline">After Effects · Photoshop</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Branding -->
+        <section class="section branding" id="branding">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label" data-reveal="up">04 — Branding</p>
+                    <h2 data-split>Logos et systèmes de marque</h2>
+                    <p data-reveal="up">Trois identités, du signe jusqu'à ses applications en salle, en boutique et sur kakémono.</p>
+                </div>
+
+                <div class="branding-grid" data-stagger>
+                    <article class="brand-card" data-reveal="up">
+                        <div class="logo-stage crop">
+                            <img width="1000" height="930" src="images/logo-lumishea.jpg" alt="Logo LumiShea" loading="lazy">
                         </div>
                         <h3>LumiShea</h3>
-                        <p>Produit cosmétique naturel à base de karité.</p>
+                        <p>Cosmétique naturelle à base de karité</p>
                     </article>
-                    <article class="brand-card reveal">
-                        <div class="logo-stage">
-                            <img src="images/logo-nova-visuel.jpg" alt="Logo NOVA VISUEL" loading="lazy">
+                    <article class="brand-card" data-reveal="up">
+                        <div class="logo-stage crop">
+                            <img width="1000" height="1000" src="images/logo-nova-visuel.jpg" alt="Logo NOVA VISUEL" loading="lazy">
                         </div>
                         <h3>NOVA VISUEL</h3>
-                        <p>Agence de communication visuelle.</p>
+                        <p>Agence de communication visuelle</p>
                     </article>
-                    <article class="brand-card reveal">
-                        <div class="logo-stage">
-                            <img src="images/logo-immobilier.jpg" alt="Logo pour une entreprise immobilière" loading="lazy">
+                    <article class="brand-card" data-reveal="up">
+                        <div class="logo-stage crop">
+                            <img width="1000" height="751" src="images/logo-immobilier.jpg" alt="Logo BLY, entreprise immobilière" loading="lazy">
                         </div>
-                        <h3>Immobilier</h3>
-                        <p>Identité pour une entreprise du secteur immobilier.</p>
+                        <h3>BLY Immobilier</h3>
+                        <p>Identité pour une entreprise du secteur immobilier</p>
                     </article>
                 </div>
 
-                <div class="mockup-strip">
-                    <article class="mockup-card reveal">
-                        <img src="images/mockup-logo-conference.jpg" alt="Mockup de logo en salle de conférence" loading="lazy">
-                        <span>Lumishea conférence</span>
-                    </article>
-                    <article class="mockup-card reveal">
-                        <img src="images/kakemono-bly.jpg" alt="Kakemono BLY" loading="lazy">
-                        <span>Kakemono BLY</span>
-                    </article>
-                    <article class="mockup-card reveal">
-                        <img src="images/enseigne-boutique.jpg" alt="Mockup d'enseigne de boutique" loading="lazy">
-                        <span>Enseigne NV</span>
-                    </article>
+                <div class="mockup-strip" data-stagger>
+                    <figure class="mockup-card" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : LumiShea en salle de conférence">
+                            <img width="1400" height="1050" src="images/mockup-logo-conference.jpg" alt="Logo LumiShea en situation dans une salle de conférence" loading="lazy">
+                        </button>
+                        <figcaption>LumiShea, salle de conférence</figcaption>
+                    </figure>
+                    <figure class="mockup-card" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : kakémono BLY">
+                            <img width="1184" height="864" src="images/kakemono-bly.jpg" alt="Kakémono BLY" loading="lazy">
+                        </button>
+                        <figcaption>Kakémono BLY</figcaption>
+                    </figure>
+                    <figure class="mockup-card" data-reveal="clip">
+                        <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : enseigne NOVA VISUEL">
+                            <img width="1400" height="933" src="images/enseigne-boutique.jpg" alt="Enseigne de boutique NOVA VISUEL" loading="lazy">
+                        </button>
+                        <figcaption>Enseigne NOVA VISUEL</figcaption>
+                    </figure>
                 </div>
             </div>
         </section>
 
-        <section class="projects section-pad" id="projets">
+        <!-- Étude de cas : Lynx Studio -->
+        <section class="lynx" id="lynx-studio" aria-labelledby="lynx-title">
             <div class="container">
-                <div class="section-heading reveal">
-                    <span class="eyebrow">Études de cas</span>
-                    <h2>Projets réalisés.</h2>
-                    <p>Des dossiers complets, avec livrables, contexte et déclinaisons visuelles.</p>
+                <div class="lynx-head">
+                    <div>
+                        <p class="section-label" data-reveal="up">05 — Étude de cas · Identité complète</p>
+                        <h2 class="lynx-title" id="lynx-title" aria-label="Lynx Studio">
+                            <span class="line" data-chars>Lynx Studio</span>
+                        </h2>
+                        <p class="lynx-tagline" data-reveal="up">L'art de capturer l'inoubliable</p>
+                    </div>
+                    <dl class="lynx-meta" data-stagger>
+                        <div data-reveal="up"><dt>Client</dt><dd>Lynx Studio, agence de communication 360°</dd></div>
+                        <div data-reveal="up"><dt>Rôle</dt><dd>Direction artistique</dd></div>
+                        <div data-reveal="up"><dt>Livrables</dt><dd>Logo, animation du logo, charte de 36 pages, papeterie, supports print</dd></div>
+                        <div data-reveal="up"><dt>Année</dt><dd>2026</dd></div>
+                    </dl>
                 </div>
 
-                <div class="project-grid">
-                    <article class="project-card reveal" style="--bg: url('../images/optimized/mockup-logo-conference.jpg')">
-                        <img src="images/mockup-logo-conference.jpg" alt="Projet d'identité visuelle LumiShea" loading="lazy">
+                <figure class="lynx-film" data-reveal="clip">
+                    <div class="media viewfinder">
+                        <video id="lynx-film" src="images/lynx-studio/lynx-logo-animation.mp4" poster="images/lynx-studio/lynx-logo-poster.jpg" muted loop playsinline preload="metadata" aria-label="Animation du logo Lynx Studio"></video>
+                        <button class="lynx-sound" type="button" aria-pressed="false">
+                            <i data-lucide="volume-x" class="icon-off"></i>
+                            <i data-lucide="volume-2" class="icon-on"></i>
+                            <span>Activer le son</span>
+                        </button>
+                    </div>
+                    <figcaption><span class="rec" aria-hidden="true"></span>Animation du logo · <span class="mono">00:00:06</span></figcaption>
+                </figure>
+
+                <div class="lynx-intro">
+                    <p class="lynx-lead" data-reveal="up">Lynx Studio aide les marques à être vues, comprises et retenues. Pour cette agence de photographie, de vidéo, de motion et de design graphique, j'ai construit une identité autour d'un seul geste&nbsp;: le regard qui capture l'instant.</p>
+                    <ol class="lynx-meaning" data-stagger>
+                        <li data-reveal="up">
+                            <span class="lm-index">01</span>
+                            <h3>L'objectif</h3>
+                            <p>Le regard de la marque. « Avoir des yeux de lynx » : voir ce que les autres ne voient pas.</p>
+                        </li>
+                        <li data-reveal="up">
+                            <span class="lm-index">02</span>
+                            <h3>L'éclat en croix</h3>
+                            <p>La lumière juste et l'instant du déclic, le moment qui mérite d'être capturé.</p>
+                        </li>
+                        <li data-reveal="up">
+                            <span class="lm-index">03</span>
+                            <h3>Le point orange</h3>
+                            <p>Le point de mise au point, comme le voyant REC d'une caméra : la touche signature.</p>
+                        </li>
+                        <li data-reveal="up">
+                            <span class="lm-index">04</span>
+                            <h3>Le logotype</h3>
+                            <p>Une écriture grasse et compacte, portée par la promesse « L'art de capturer l'inoubliable ».</p>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="lynx-system">
+                    <div class="lynx-palette" data-stagger>
+                        <button class="swatch swatch--orange" type="button" data-reveal="up" data-copy="#F67148" data-copy-label="Couleur #F67148 copiée">
+                            <span class="swatch-name">Orange Focus</span>
+                            <span class="swatch-role">Énergie, créativité, point focal</span>
+                            <span class="swatch-hex">#F67148 <i data-lucide="copy"></i></span>
+                        </button>
+                        <button class="swatch swatch--black" type="button" data-reveal="up" data-copy="#0A0A0A" data-copy-label="Couleur #0A0A0A copiée">
+                            <span class="swatch-name">Noir Lynx</span>
+                            <span class="swatch-role">Profondeur, élégance, cadre</span>
+                            <span class="swatch-hex">#0A0A0A <i data-lucide="copy"></i></span>
+                        </button>
+                        <button class="swatch swatch--white" type="button" data-reveal="up" data-copy="#FFFFFF" data-copy-label="Couleur #FFFFFF copiée">
+                            <span class="swatch-name">Blanc Lumière</span>
+                            <span class="swatch-role">Clarté, espace, respiration</span>
+                            <span class="swatch-hex">#FFFFFF <i data-lucide="copy"></i></span>
+                        </button>
+                    </div>
+                    <div class="lynx-type" data-reveal="up">
+                        <p class="lynx-type-sample" aria-hidden="true">Aa</p>
+                        <ul>
+                            <li><span>Logotype</span><strong class="ff-arial">Arial Black</strong></li>
+                            <li><span>Titres</span><strong class="ff-changa">Changa One</strong></li>
+                            <li><span>Textes</span><strong>Poppins</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lynx-charte">
+                    <div class="lynx-sub" data-reveal="up">
+                        <div>
+                            <h3>La charte graphique</h3>
+                            <p>36 pages : logo, couleurs, polices, motif du viseur, icônes et applications. Faites glisser pour feuilleter.</p>
+                        </div>
+                        <div class="strip-nav">
+                            <button class="strip-btn" type="button" data-strip="-1" aria-label="Pages précédentes"><i data-lucide="arrow-left"></i></button>
+                            <button class="strip-btn" type="button" data-strip="1" aria-label="Pages suivantes"><i data-lucide="arrow-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="charte-strip" tabindex="0" aria-label="Pages de la charte graphique Lynx Studio" data-reveal="up">
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, couverture">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-01.webp" alt="Charte graphique Lynx Studio, page 1 : Couverture" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 01</span>Couverture</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, présentation de la marque">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-03.webp" alt="Charte graphique Lynx Studio, page 3 : Présentation de la marque" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 03</span>Présentation de la marque</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, logo principal">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-05.webp" alt="Charte graphique Lynx Studio, page 5 : Logo principal" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 05</span>Logo principal</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, logotype et signification">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-07.webp" alt="Charte graphique Lynx Studio, page 7 : Logotype et signification" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 07</span>Logotype et signification</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, variations du logo">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-10.webp" alt="Charte graphique Lynx Studio, page 10 : Variations du logo" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 10</span>Variations du logo</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, fonds autorisés">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-12.webp" alt="Charte graphique Lynx Studio, page 12 : Fonds autorisés" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 12</span>Fonds autorisés</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, palette de couleurs">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-16.webp" alt="Charte graphique Lynx Studio, page 16 : Palette de couleurs" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 16</span>Palette de couleurs</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, nuances et proportions">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-17.webp" alt="Charte graphique Lynx Studio, page 17 : Nuances et proportions" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 17</span>Nuances et proportions</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, hiérarchie typographique">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-20.webp" alt="Charte graphique Lynx Studio, page 20 : Hiérarchie typographique" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 20</span>Hiérarchie typographique</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, motif : le viseur">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-22.webp" alt="Charte graphique Lynx Studio, page 22 : Motif : le viseur" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 22</span>Motif : le viseur</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, icônes de services">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-25.webp" alt="Charte graphique Lynx Studio, page 25 : Icônes de services" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 25</span>Icônes de services</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, cartes de visite">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-28.webp" alt="Charte graphique Lynx Studio, page 28 : Cartes de visite" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 28</span>Cartes de visite</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, enseigne">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-30.webp" alt="Charte graphique Lynx Studio, page 30 : Enseigne" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 30</span>Enseigne</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, tee-shirt">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-31.webp" alt="Charte graphique Lynx Studio, page 31 : Tee-shirt" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 31</span>Tee-shirt</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, réseaux sociaux">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-34.webp" alt="Charte graphique Lynx Studio, page 34 : Réseaux sociaux" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 34</span>Réseaux sociaux</figcaption>
+                        </figure>
+                        <figure class="charte-page">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : charte, habillage vidéo">
+                                <img width="1600" height="900" src="images/lynx-studio/charte-35.webp" alt="Charte graphique Lynx Studio, page 35 : Habillage vidéo" loading="lazy" draggable="false">
+                            </button>
+                            <figcaption><span>p. 35</span>Habillage vidéo</figcaption>
+                        </figure>
+                    </div>
+                    <div class="strip-progress" aria-hidden="true"><span></span></div>
+                </div>
+
+                <div class="lynx-apps">
+                    <div class="lynx-sub" data-reveal="up">
+                        <div>
+                            <h3>Applications</h3>
+                            <p>La marque en situation : papeterie, badges et supports de communication pour les offres du studio.</p>
+                        </div>
+                    </div>
+                    <div class="bento bento--a" data-stagger>
+                        <figure class="bento-item" data-reveal="clip">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : papeterie Lynx Studio">
+                                <img width="2000" height="1500" src="images/lynx-studio/papeterie.webp" alt="Papeterie Lynx Studio : téléphone, tasse, carte de visite et en-tête" loading="lazy">
+                            </button>
+                            <figcaption><span>Papeterie</span><span class="tag">Tasse · carte · en-tête</span></figcaption>
+                        </figure>
+                        <figure class="bento-item" data-reveal="clip">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : flyer des services Lynx Studio">
+                                <img width="1400" height="1561" src="images/lynx-studio/flyer-services.webp" alt="Flyer des services Lynx Studio : photographie, vidéographie, graphic design, motion design" loading="lazy">
+                            </button>
+                            <figcaption><span>Flyer des services</span><span class="tag">Print · réseaux</span></figcaption>
+                        </figure>
+                    </div>
+                    <div class="bento bento--b" data-stagger>
+                        <figure class="bento-item" data-reveal="clip">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : packages mariage Lynx Studio">
+                                <img width="1400" height="1750" src="images/lynx-studio/packages-dot-mariage.webp" alt="Flyer des packages mariage Lynx Studio : dot, civil et religieux" loading="lazy">
+                            </button>
+                            <figcaption><span>Packages mariage</span><span class="tag">Dot · civil · religieux</span></figcaption>
+                        </figure>
+                        <figure class="bento-item" data-reveal="clip">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : badges Lynx Studio">
+                                <img width="1600" height="1067" src="images/lynx-studio/badges.webp" alt="Badges recto verso Lynx Studio" loading="lazy">
+                            </button>
+                            <figcaption><span>Badges</span><span class="tag">Recto · verso</span></figcaption>
+                        </figure>
+                        <figure class="bento-item" data-reveal="clip">
+                            <button class="gallery-open" type="button" data-cursor="Voir" aria-label="Agrandir : en-tête A4 Lynx Studio">
+                                <img width="1600" height="1200" src="images/lynx-studio/en-tete-a4.webp" alt="Papier en-tête A4 Lynx Studio" loading="lazy">
+                            </button>
+                            <figcaption><span>En-tête A4</span><span class="tag">Papeterie</span></figcaption>
+                        </figure>
+                    </div>
+                </div>
+
+                <div class="lynx-end" data-reveal="up">
+                    <p>Une marque à construire de A à Z, du logo jusqu'à l'animation&nbsp;?</p>
+                    <a class="btn btn-primary btn-lg magnetic" href="#contact">Parlons-en <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projets -->
+        <section class="section projects" id="projets">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label" data-reveal="up">06 — Études de cas</p>
+                    <h2 data-split>Projets complets</h2>
+                    <p data-reveal="up">Des dossiers avec le contexte, les livrables et les déclinaisons visuelles.</p>
+                </div>
+
+                <div class="project-grid" data-stagger>
+                    <a class="project-card tilt" data-reveal="up" data-cursor="Voir" href="#lynx-studio">
+                        <div class="project-image">
+                            <img width="2000" height="1500" src="images/lynx-studio/papeterie.webp" alt="Identité visuelle Lynx Studio en situation" loading="lazy">
+                        </div>
                         <div class="project-content">
-                            <div class="project-topline">
-                                <span>Branding</span>
-                                <span class="progress"><b style="width: 92%"></b></span>
-                            </div>
-                            <h3>LumiShea Identité Visuelle</h3>
+                            <p class="tag">Identité complète</p>
+                            <h3>Lynx Studio, identité visuelle</h3>
+                            <p>Logo, animation du logo, charte graphique de 36 pages et supports print pour une agence de communication 360°.</p>
+                            <span class="text-link">Voir l'étude de cas <i data-lucide="arrow-down-right"></i></span>
+                        </div>
+                    </a>
+                    <a class="project-card tilt" data-reveal="up" data-cursor="Ouvrir" href="https://drive.google.com/drive/folders/1O84SJXyg7M1MpvR06k7IRwQ_wk7P3PdZ?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <div class="project-image">
+                            <img width="1400" height="1050" src="images/mockup-logo-conference.jpg" alt="Identité visuelle LumiShea en situation" loading="lazy">
+                        </div>
+                        <div class="project-content">
+                            <p class="tag">Branding</p>
+                            <h3>LumiShea, identité visuelle</h3>
                             <p>Logo, charte graphique et stratégie de communication pour une marque cosmétique.</p>
-                            <a href="https://drive.google.com/drive/folders/1O84SJXyg7M1MpvR06k7IRwQ_wk7P3PdZ?usp=sharing" target="_blank" rel="noopener noreferrer">Voir le dossier</a>
+                            <span class="text-link">Voir le dossier <i data-lucide="arrow-up-right"></i></span>
                         </div>
-                    </article>
-                    <article class="project-card reveal">
-                        <img src="images/campagne-environnementale.jpg" alt="Projet de campagne environnementale à Abidjan" loading="lazy">
+                    </a>
+                    <a class="project-card tilt" data-reveal="up" data-cursor="Ouvrir" href="https://drive.google.com/drive/folders/1an7o0nMj7zcIh2jC7MvPN-iiNQi-PWcX?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <div class="project-image">
+                            <img width="1400" height="1400" src="images/campagne-environnementale.jpg" alt="Affiche de la campagne environnementale à Abidjan" loading="lazy">
+                        </div>
                         <div class="project-content">
-                            <div class="project-topline">
-                                <span>Campagne</span>
-                                <span class="progress"><b style="width: 86%"></b></span>
-                            </div>
+                            <p class="tag">Campagne</p>
                             <h3>Ivoirien pour l'environnement</h3>
-                            <p>Campagne de sensibilisation environnementale à Abidjan avec affiches et document projet.</p>
-                            <a href="https://drive.google.com/drive/folders/1an7o0nMj7zcIh2jC7MvPN-iiNQi-PWcX?usp=sharing" target="_blank" rel="noopener noreferrer">Voir le dossier</a>
+                            <p>Campagne de sensibilisation environnementale à Abidjan, avec affiches et document projet.</p>
+                            <span class="text-link">Voir le dossier <i data-lucide="arrow-up-right"></i></span>
                         </div>
-                    </article>
-                    <article class="project-card reveal">
-                        <img src="images/logo-nova-visuel.jpg" alt="Projet de mini charte graphique NOVA VISUEL" loading="lazy">
+                    </a>
+                    <a class="project-card tilt" data-reveal="up" data-cursor="Ouvrir" href="https://drive.google.com/drive/folders/1vi4Wrnas_3o4AXnF3UMlMye-tipMRhwY?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <div class="project-image project-image--logo">
+                            <img width="1000" height="1000" src="images/logo-nova-visuel.jpg" alt="Logo NOVA VISUEL, extrait de la mini charte" loading="lazy">
+                        </div>
                         <div class="project-content">
-                            <div class="project-topline">
-                                <span>Charte</span>
-                                <span class="progress"><b style="width: 78%"></b></span>
-                            </div>
+                            <p class="tag">Charte</p>
                             <h3>NOVA VISUEL</h3>
                             <p>Mini charte graphique pour une entreprise de communication visuelle.</p>
-                            <a href="https://drive.google.com/drive/folders/1vi4Wrnas_3o4AXnF3UMlMye-tipMRhwY?usp=sharing" target="_blank" rel="noopener noreferrer">Voir le dossier</a>
+                            <span class="text-link">Voir le dossier <i data-lucide="arrow-up-right"></i></span>
                         </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pourquoi moi -->
+        <section class="section why" id="pourquoi-moi">
+            <div class="container">
+                <div class="section-heading">
+                    <p class="section-label" data-reveal="up">07 — Pourquoi moi</p>
+                    <h2 data-split>Un seul profil pour l'image, le mouvement et le web</h2>
+                    <p data-reveal="up">Souvent, il faut un graphiste, un motion designer et quelqu'un qui comprend le web. Avec moi, une idée passe du papier à l'écran sans perdre son sens.</p>
+                </div>
+
+                <div class="why-grid" data-stagger>
+                    <article class="why-card" data-reveal="up">
+                        <div class="why-top">
+                            <span class="why-num">01</span>
+                            <span class="why-icon"><i data-lucide="pen-tool"></i></span>
+                        </div>
+                        <h3>Je conçois</h3>
+                        <p>Affiches, logos et chartes graphiques complètes, de l'idée jusqu'au fichier prêt à imprimer.</p>
+                        <p class="why-proof">Charte Lynx Studio de 36 pages · 13 visuels print et réseaux</p>
+                        <a class="text-link" href="#realisations">Voir les affiches <i data-lucide="arrow-right"></i></a>
+                    </article>
+                    <article class="why-card" data-reveal="up">
+                        <div class="why-top">
+                            <span class="why-num">02</span>
+                            <span class="why-icon"><i data-lucide="clapperboard"></i></span>
+                        </div>
+                        <h3>J'anime</h3>
+                        <p>Motion design et montage sous After Effects et Premiere Pro : capsules publicitaires, animations de logo, CV animés.</p>
+                        <p class="why-proof">6 vidéos motion, dont Wave, Toyi Group et Lynx Studio</p>
+                        <a class="text-link" href="#videos">Voir les vidéos <i data-lucide="arrow-right"></i></a>
+                    </article>
+                    <article class="why-card" data-reveal="up">
+                        <div class="why-top">
+                            <span class="why-num">03</span>
+                            <span class="why-icon"><i data-lucide="code"></i></span>
+                        </div>
+                        <h3>Je sais intégrer</h3>
+                        <p>Formé en informatique, je parle le langage des développeurs et je livre des fichiers pensés pour le web.</p>
+                        <p class="why-proof">BTS informatique (IDA, HETEC) · stage en développement web au ministère des Transports</p>
+                        <a class="text-link" href="CV/MON CV PRO.pdf" download="MON CV PRO.pdf" target="_blank">Voir mon CV <i data-lucide="arrow-right"></i></a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="contact section-pad" id="contact">
-            <div class="container contact-inner reveal">
-                <span class="eyebrow">Contact</span>
-                <h2>Construisons une image qui reste en tête.</h2>
-                <p>Vous avez une marque à lancer, un support à designer ou une campagne à faire rayonner ? Écrivons la suite directement.</p>
-                <div class="contact-buttons">
-                    <a class="social-pill" href="https://wa.me/2250779099443" target="_blank" rel="noopener noreferrer"><i data-lucide="message-circle"></i> WhatsApp</a>
-                    <a class="social-pill" href="https://mail.google.com/mail/?view=cm&fs=1&to=dorgelesdebenzo4@gmail.com" target="_blank" rel="noopener noreferrer"><i data-lucide="mail"></i> Email</a>
-                    <a class="social-pill" href="https://www.linkedin.com/in/edy-dorgeles-djombo" target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg> LinkedIn</a>
-                    <a class="social-pill" href="CV/MON CV PRO.pdf" download="MON CV PRO.pdf" target="_blank"><i data-lucide="file-down"></i> CV</a>
+        <!-- Contact -->
+        <section class="section contact" id="contact">
+            <div class="container">
+                <p class="section-label" data-reveal="up">08 — Contact</p>
+                <h2 class="contact-title" aria-label="Travaillons ensemble">
+                    <span class="line" data-chars>Travaillons</span>
+                    <span class="line line-serif" data-chars>ensemble</span>
+                </h2>
+
+                <div class="contact-grid">
+                    <div class="contact-intro" data-reveal="up">
+                        <p class="contact-lead">Vous recrutez un graphiste ou un motion designer&nbsp;? Je suis disponible pour un poste ou une mission, en Côte d'Ivoire, en Afrique francophone ou en télétravail.</p>
+                        <p class="contact-note"><span class="status-dot" aria-hidden="true"></span>Le plus rapide pour me joindre&nbsp;: WhatsApp</p>
+
+                        <div class="clock" aria-live="off">
+                            <div class="clock-top">
+                                <span class="clock-place"><i data-lucide="map-pin"></i>Abidjan, Côte d'Ivoire</span>
+                                <span class="clock-zone">GMT+0</span>
+                            </div>
+                            <p class="clock-time" id="abidjan-time" aria-label="Heure actuelle à Abidjan">--:--<span class="clock-sec">:--</span></p>
+                            <p class="clock-day" id="abidjan-day">&nbsp;</p>
+                            <p class="clock-status" id="abidjan-status"><span class="clock-dot"></span><span>&nbsp;</span></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-cards" data-stagger>
+                        <a class="contact-card contact-card--primary magnetic" data-reveal="up" href="https://wa.me/2250779099443?text=Bonjour%20Edy%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission." target="_blank" rel="noopener noreferrer">
+                            <i data-lucide="message-circle" class="cc-icon"></i>
+                            <span class="cc-text">
+                                <span class="cc-label">Écrire sur WhatsApp</span>
+                                <span class="cc-value">+225 07 79 09 94 43</span>
+                            </span>
+                            <i data-lucide="arrow-up-right" class="cc-arrow"></i>
+                        </a>
+
+                        <div class="contact-card contact-card--split" data-reveal="up">
+                            <a class="cc-main" href="mailto:dorgelesdebenzo4@gmail.com?subject=Opportunit%C3%A9%20%E2%80%94%20suite%20%C3%A0%20votre%20portfolio&amp;body=Bonjour%20Edy%2C%0A%0AJ%27ai%20consult%C3%A9%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission.%0A%0A">
+                                <i data-lucide="mail" class="cc-icon"></i>
+                                <span class="cc-text">
+                                    <span class="cc-label">Email</span>
+                                    <span class="cc-value">dorgelesdebenzo4@gmail.com</span>
+                                </span>
+                            </a>
+                            <button class="cc-copy" type="button" data-copy="dorgelesdebenzo4@gmail.com" aria-label="Copier l'adresse email">
+                                <i data-lucide="copy"></i>
+                                <span>Copier</span>
+                            </button>
+                        </div>
+
+                        <a class="contact-card" data-reveal="up" href="https://www.linkedin.com/in/edy-dorgeles-djombo" target="_blank" rel="noopener noreferrer">
+                            <svg class="cc-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                            <span class="cc-text">
+                                <span class="cc-label">LinkedIn</span>
+                                <span class="cc-value">edy-dorgeles-djombo</span>
+                            </span>
+                            <i data-lucide="arrow-up-right" class="cc-arrow"></i>
+                        </a>
+
+                        <a class="contact-card" data-reveal="up" href="CV/MON CV PRO.pdf" download="MON CV PRO.pdf" target="_blank">
+                            <i data-lucide="file-down" class="cc-icon"></i>
+                            <span class="cc-text">
+                                <span class="cc-label">Mon CV</span>
+                                <span class="cc-value">PDF · 230 Ko</span>
+                            </span>
+                            <i data-lucide="download" class="cc-arrow"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <div class="lightbox" id="lightbox" aria-hidden="true">
-        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Fermer l'image"><i data-lucide="x"></i></button>
-        <button class="lightbox-nav lightbox-prev" id="lightbox-prev" type="button" aria-label="Image précédente"><i data-lucide="chevron-left"></i></button>
+    <!-- Bouton de contact flottant -->
+    <a class="float-cta magnetic" href="https://wa.me/2250779099443?text=Bonjour%20Edy%2C%20j%27ai%20vu%20votre%20portfolio%20et%20je%20souhaiterais%20%C3%A9changer%20avec%20vous%20au%20sujet%20d%27un%20poste%20ou%20d%27une%20mission." target="_blank" rel="noopener noreferrer" aria-label="Me contacter sur WhatsApp">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>Me contacter</span>
+        <i data-lucide="message-circle"></i>
+    </a>
+
+    <div class="toast" role="status" aria-live="polite"></div>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Aperçu de l'image">
+        <button class="lightbox-btn lightbox-close" id="lightbox-close" type="button" aria-label="Fermer l'image"><i data-lucide="x"></i></button>
+        <button class="lightbox-btn lightbox-prev" id="lightbox-prev" type="button" aria-label="Image précédente"><i data-lucide="chevron-left"></i></button>
         <img class="lightbox-content" id="lightbox-img" src="" alt="">
-        <button class="lightbox-nav lightbox-next" id="lightbox-next" type="button" aria-label="Image suivante"><i data-lucide="chevron-right"></i></button>
+        <button class="lightbox-btn lightbox-next" id="lightbox-next" type="button" aria-label="Image suivante"><i data-lucide="chevron-right"></i></button>
     </div>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2026 Djombo Edy Dorgeles - Motion Designer - Monteur vidéo & Designer Graphique / Abidjan.</p>
+        <div class="container footer-inner">
+            <p>© 2026 Djombo Edy Dorgeles</p>
+            <p>Graphiste, motion designer et monteur vidéo · Abidjan</p>
+            <a class="back-top" href="#accueil">Haut de page <i data-lucide="arrow-up"></i></a>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
